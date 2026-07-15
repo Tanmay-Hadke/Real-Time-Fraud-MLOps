@@ -1,0 +1,22 @@
+# Data and Feature Store
+data/
+feature_repository/data/
+*.parquet
+*.csv
+
+# MLflow Tracking
+mlruns/
+*.db
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.env
+
+# OS Files
+.DS_Store
