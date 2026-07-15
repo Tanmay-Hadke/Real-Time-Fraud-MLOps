@@ -106,13 +106,13 @@ flowchart LR
 
     subgraph Serve["5️⃣ Real-Time Serving"]
         G --> H["FastAPI app.py<br/>loads latest 'Production' model"]
-        E -. features .-> H
+        E -.->|features| H
         H --> I{{"/v1/score<br/>fraud_probability + decision"}}
     end
 
     subgraph Monitor["6️⃣ Drift Monitoring"]
         I --> J["drift.py<br/>Population Stability Index"]
-        D -. baseline dist. .-> J
+        D -.->|baseline dist.| J
         J --> K["Streamlit dashboard.py<br/>live PSI + alerts"]
     end
 
